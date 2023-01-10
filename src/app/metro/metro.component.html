@@ -1,0 +1,15 @@
+<div *ngIf="showMsg" style="background-color: rgb(255,0,0,0.25); padding: 1rem;border-radius: 10px;
+margin: 0 10px; text-align: center; font-weight: bold; color: white; margin-top: 20px;" >
+    This place has already been added!
+</div>
+<div class="center "  >
+    <div style="background-color: rgb(255,255,255,0.15); padding: 1rem;border-radius: 10px;margin: 0 10px;" *ngFor="let data of cityData">
+        <h1 style="color: yellow; font-size: xx-large;" ><span>{{data.current.temp_c}}</span>°C  <span class="btn" (click)="removeCity(data)" style="float:right;color:white; background-color: rgb(255,255,255,0.40);">X</span></h1>
+        <h3>Its {{data.current.condition.text}} and it feels like {{data.current.feelslike_c}}°C</h3>
+        <p style="color: white; font-size: 1.60rem;">{{data.location.name}} <span class="material-icons" style="color: tomato;">location_on</span></p>
+        <img src="{{data.current.condition.icon}}" alt="">
+    </div>
+    <div class="btn" style="background-color: rgb(255,255,255,0.25); padding: 1rem;border-radius: 10px;margin: 0 10px;" (click)="addCity()">
+        Add city +
+    </div>
+</div>

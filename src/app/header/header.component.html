@@ -1,0 +1,21 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Weather App</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav col-md-9">
+        <a class="nav-item nav-link " [ngClass]=" {'active-tab': tab=='home' }" href="#" (click)="tabChange('home')" >Home <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" [ngClass]=" {'active-tab': tab=='metro' }"  href="#" (click)="tabChange('metro')">Metro</a>
+        <!-- <a class="nav-item nav-link" href="#">Pricing</a> -->
+        
+      </div>
+      
+      <!-- <div class="col-md-1">{{city}}<span><mat-icon style="color: red;"> place</mat-icon></span></div> -->
+      <div class="col-md-3">
+        <input class="form-control" type="text" name="search" style="max-width:200px;display: inline;" [(ngModel)]="place" autocomplete="off" placeholder="Enter city" (change)="searchCity()">
+        <button type="button" class="btn btn-outline-primary" style="margin-left: 1.5rem;">search</button>
+      </div>
+    </div>
+  </nav>
+  
