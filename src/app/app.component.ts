@@ -37,9 +37,9 @@ export class AppComponent implements OnInit{
       })
     })
   }
-  getLive(){
-    this.service.LoadCurrentWeather(10001).subscribe(data=>{
-      console.log(data)
-    })
-  }
+  // getLive(){
+  //   this.service.LoadCurrentWeather(10001).subscribe(data=>{
+  //     console.log(data)
+  //   })
+  // }
 }
